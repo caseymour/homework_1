@@ -1,0 +1,48 @@
+---
+title: "Homework1"
+author: Catherine Seymour
+output:
+  github_document
+
+---
+website to get data from: https://www.fhwa.dot.gov/bridge/nbi/ascii1992.cfm
+
+1. output.github_document
+  do it this way and push to github
+  output.html_document
+  turn un .html on canvas
+  
+2. include link to github in your html document
+3. do str(/data/) and some plot to show your data loaded
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(tidyverse)
+```
+  
+
+```{r}
+X <- read.csv('2020HwyBridgesDelimitedAllStates.csv')
+```
+
+```{r}
+Bridges_data = X %>%
+  select("BRIDGE_CONDITION", "YEAR_BUILT_027", "COUNTY_CODE_003", "ADT_029", "STRUCTURE_NUMBER_008", "FUTURE_ADT_114") %>%
+  drop_na()
+```
+```{r}
+Bridges_data_head = Bridges_data[1:100,]
+
+ggplot(Bridges_data_head, aes(ADT_029, FUTURE_ADT_114, color = YEAR_BUILT_027)) + geom_point() + scale_y_discrete(breaks = seq(0, 10000, 1000))
+```
+
+
+
+
+
+
+
+
+
+
