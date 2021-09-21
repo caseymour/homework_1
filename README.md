@@ -2,15 +2,8 @@ Homework1
 ================
 Catherine Seymour
 
-website to get data from:
-<https://www.fhwa.dot.gov/bridge/nbi/ascii1992.cfm>
-
-1.  output.github\_document do it this way and push to github
-    output.html\_document turn un .html on canvas
-
-2.  include link to github in your html document
-
-3.  do str(/data/) and some plot to show your data loaded
+source: https://www.fhwa.dot.gov/bridge/nbi/ascii1992.cfm
+github: https://github.com/caseymour/homework_1
 
 <!-- end list -->
 
